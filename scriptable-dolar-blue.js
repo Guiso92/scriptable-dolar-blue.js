@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------
 Script: scriptable-dolar-blue.js
 Author: Diego Graziano
-Version: 1.0.0
+Version: 1.0.1
 
 Description:
 Displays the current "Dolar Blue" currency rate to Argentine Peso (ARS).
@@ -9,6 +9,7 @@ Displays the current "Dolar Blue" currency rate to Argentine Peso (ARS).
 Changelog:
 
 1.0.0: Initialization
+1.0.1: When touching the widget it opens URL "dolarito.ar" with all dollar types of currency rates.
 -------------------------------------------------------------- */
 const url = `https://api-dolar-argentina.herokuapp.com/api/dolarblue`
 const req = new Request(url)
