@@ -10,11 +10,13 @@ Changelog:
 
 1.0.0: Initialization
 1.0.1: When touching the widget it opens URL "dolarito.ar" with all dollar types of currency rates.
+1.0.2: Through slice function it removes last 3 chracters from value string to round number.
 -------------------------------------------------------------- */
 const url = `https://api-dolar-argentina.herokuapp.com/api/dolarblue`
 const req = new Request(url)
 const res = await req.loadJSON()
 const valor = res.venta;
+const valorRound = valor.slice(0. -3);
 const fecha = res.fecha;
 const i = new Request('https://github.com/diegograziano/scriptable-dolar-blue.js/raw/main/img/dollar-icon.png')
 const img = await i.loadImage()
@@ -50,7 +52,7 @@ function createWidget(valor, fecha, img) {
 
   w.addSpacer(8)
 
-  let valorTxt = w.addText(valor)
+  let valorTxt = w.addText(valorRound)
   valorTxt.textColor = Color.blue()
   valorTxt.font = Font.systemFont(18)
   valorTxt.centerAlignText()
