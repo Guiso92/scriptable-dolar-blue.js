@@ -22,5 +22,4 @@ Based entirely on [wickenico btc-usd-course](https://github.com/wickenico/btc-us
 
 
 ## TODO
-- Add rounding for numbers (Why Scriptable doesn´t have 'round' function?)
 - Add up and down tracker.
